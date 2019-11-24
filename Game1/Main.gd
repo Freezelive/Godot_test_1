@@ -13,7 +13,7 @@ func create_object_on_scene():
 	#-------------------------------------
 	#Declare the items for a sprite
 	#-------------------------------------
-	var sprite_texture = preload("./resources/sprite.jpg")
+	var sprite_texture = preload("./resources/sprite.png")
 	var sprite_body = StaticBody2D.new()
 	var sprite_item=Sprite.new() 
 	
@@ -29,14 +29,14 @@ func create_object_on_scene():
 var rng = RandomNumberGenerator.new()
 var bodyque = [] #hold elemnts creating an array
 var bodyque_lifetime=[]
-var screen_size=OS.get_window_safe_area().size
+var screen_size=OS.get_window_safe_area().size #get screen size
 
 func remove_object_to_scene(var body):
 	body.queue_free()
 	pass
 
 func add_object_to_scene(var body):
-	body.add_to_group("printed")  #adds body to group printed this also created the group printe if
+	body.add_to_group("printed")  #adds body to group printed this also created the group printe if 
 	add_child(body)
 	pass
 
