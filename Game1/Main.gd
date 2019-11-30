@@ -74,5 +74,6 @@ func _ready():
 func _process(delta):
 	bodyque.push_front (create_object_on_scene()) #store nely created sprite
 	sprite_manage(bodyque) #process newly created/existing bodys
-	
+	if Input.is_action_pressed("ui_cancel"):
+		get_tree().change_scene("res://mainMenu.tscn")
 	pass

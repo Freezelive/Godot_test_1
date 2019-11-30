@@ -119,4 +119,6 @@ func  _physics_process(delta):
 			velocity = Vector2()
 			#velocity = player_kin_body.move_and_slide(velocity)
 	player_kin_body.move_and_slide(velocity)
+	if Input.is_action_pressed("ui_cancel"):
+		get_tree().change_scene("res://mainMenu.tscn")
 	pass
