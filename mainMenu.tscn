@@ -51,6 +51,12 @@ margin_right = 541.0
 margin_bottom = 232.0
 text = "Game 2"
 
+[node name="button_game_3" type="Button" parent="HBoxContainer/VBoxContainer"]
+margin_top = 236.0
+margin_right = 541.0
+margin_bottom = 256.0
+text = "Game 3"
+
 [node name="Label2" type="Label" parent="HBoxContainer"]
 margin_left = 745.0
 margin_top = 277.0
@@ -59,3 +65,4 @@ margin_bottom = 291.0
 text = "                                               "
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/button_game_1" to="." method="_on_button_game_1_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/button_game_2" to="." method="_on_button_game_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/button_game_3" to="." method="_on_button_game_3_pressed"]
