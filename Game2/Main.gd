@@ -32,10 +32,10 @@ func create_menu():
 	
 
 #this keeps track of what button was pressed to enable movement option
-func movement_selector(target="No movement option",idx=0):
+func movement_selector(title_text="No movement option",idx=0):
 	#print (target.get_text())
 	Player_movement_option = idx
-	selected_option_title.text=target.get_text()
+	selected_option_title.text=title_text.get_text()
 
 #global variables
 var speed = 200
@@ -120,5 +120,6 @@ func  _physics_process(delta):
 			#velocity = player_kin_body.move_and_slide(velocity)
 	player_kin_body.move_and_slide(velocity)
 	if Input.is_action_pressed("ui_cancel"):
-		get_tree().change_scene("res://mainMenu.tscn")
+		if get_tree().change_scene("res://mainMenu.tscn") != OK:
+			print ("An unexpected error occured when trying to switch to the Readme scene")
 	pass

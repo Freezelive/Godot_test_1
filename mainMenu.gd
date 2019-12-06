@@ -6,14 +6,15 @@ func _ready():
 
 
 
-
 func _on_button_game_1_pressed():
-	get_tree().change_scene("res://Game1/Main.tscn")
+	if get_tree().change_scene("res://Game1/Main.tscn") != OK:
+		print ("An unexpected error occured when trying to switch to the Readme scene")
 
 
 func _on_button_game_2_pressed():
-	get_tree().change_scene("res://Game2/Main.tscn")
-	pass # Replace with function body.
+	if get_tree().change_scene("res://Game2/Main.tscn") != OK:
+		print ("An unexpected error occured when trying to switch to the Readme scene")
+#	pass # Replace with function body.
 	
 #func _process(delta):
 #	if Input.is_action_pressed("ui_cancel"):
@@ -22,5 +23,6 @@ func _on_button_game_2_pressed():
 
 
 func _on_button_game_3_pressed():
-	get_tree().change_scene("res://Game3/Main.tscn")
-	pass # Replace with function body.
+	if get_tree().change_scene("res://Game2/Main.tscn") != OK:
+		print ("An unexpected error occured when trying to switch to the Readme scene")
+#	pass # Replace with function body.

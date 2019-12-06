@@ -126,7 +126,8 @@ func _process(delta):
 	grid_move()
 	player_kin_body.move_and_collide(velocity*delta)
 	if Input.is_action_pressed("ui_cancel"):
-		get_tree().change_scene("res://mainMenu.tscn")
+		if get_tree().change_scene("res://mainMenu.tscn") != OK:
+			print ("An unexpected error occured when trying to switch to the Readme scene")
 
 
 

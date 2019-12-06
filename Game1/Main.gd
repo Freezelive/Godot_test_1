@@ -45,8 +45,6 @@ func sprite_manage(var body_collection):
 	var current = 0
 	var tmp
 	while current < len(body_collection):
-		#print_debug(get_tree().get_root())
-		print ( get_tree().get_nodes_in_group("printed").size())
 		if !body_collection[current].is_in_group("printed"): #check if body is in group printed
 			add_object_to_scene(body_collection[current])
 			bodyque_lifetime.push_front(rng.randf_range (10, 20)) #a variable to set lifetime of body
@@ -75,5 +73,6 @@ func _process(delta):
 	bodyque.push_front (create_object_on_scene()) #store nely created sprite
 	sprite_manage(bodyque) #process newly created/existing bodys
 	if Input.is_action_pressed("ui_cancel"):
-		get_tree().change_scene("res://mainMenu.tscn")
+		if get_tree().change_scene("res://mainMenu.tscn") != OK:
+			print ("An unexpected error occured when trying to switch to the Readme scene")
 	pass
