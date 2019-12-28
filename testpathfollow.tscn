@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://testpathfollow.gd" type="Script" id=1]
+[ext_resource path="res://Game4/resources/sprite.png" type="Texture" id=2]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 155.112, 199.508, 0, 0, 0, 0, 171.853, 393.232, 0, 0, 0, 0, 279.478, 469.766, 0, 0, 0, 0, 537.778, 472.157, 0, 0, 0, 0, 671.711, 457.807, 0, 0, 0, 0, 776.945, 335.833, 0, 0, 0, 0, 827.169, 223.424, 0, 0, 0, 0, 843.911, 101.449, 0, 0, 0, 0, 760.203, 56.0078, 0, 0, 0, 0, 578.436, 60.7911, 0, 0, 0, 0, 468.42, 91.8828, 0, 0, 0, 0, 344.053, 139.716, 0, 0, 0, 0, 346.445, 201.899, 0, 0, 0, 0, 401.453, 259.299, 0, 0, 0, 0, 516.253, 252.124, 0, 0, 0, 0, 592.786, 218.641, 0, 0, 0, 0, 676.495, 201.899, 0, 0, 0, 0, 693.236, 199.508, 0, 0, 0, 0, 803.253, 350.182, 0, 0, 0, 0, 836.736, 462.591, 0, 0, 0, 0, 858.261, 563.041, 0, 0, 0, 0, 872.611, 625.224 )
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 155.112, 199.508 )
+rotation = 1.4846
+
+[node name="Sprite" type="Sprite" parent="Path2D/PathFollow2D"]
+texture = ExtResource( 2 )
